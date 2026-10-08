@@ -1,0 +1,464 @@
+# AI-Based Automatic Question Generation System
+
+## 📌 Project Overview
+
+The **AI-Based Automatic Question Generation System** is an NLP and Machine Learning application that automatically generates questions from uploaded educational documents.
+
+The system accepts documents in different formats, extracts the content, and uses an AI language model to generate questions based on the selected question type and difficulty level.
+
+The generated questions are further analyzed using Machine Learning models to classify question type, difficulty, similarity, and quality.
+
+---
+
+## ✨ Features
+
+* 📄 Upload educational documents
+* 📚 Support for PDF, DOCX, TXT, and PPTX files
+* 🤖 AI-based automatic question generation
+* 🌐 Support for Myanmar, Pali, and English
+* ❓ Multiple question types
+* 🎯 Difficulty-level selection
+* 🔍 Duplicate/similarity detection
+* 📊 Machine Learning-based question analysis
+* 📝 Export generated questions
+* 🖥️ Interactive Gradio Web Interface
+
+---
+
+## 🧠 Question Types
+
+The system can generate:
+
+* Multiple Choice Questions (MCQ)
+* True / False Questions
+* Short Answer Questions
+* Mixed Question Types
+
+---
+
+## 🎯 Difficulty Levels
+
+Users can select:
+
+* Easy
+* Medium
+* Hard
+* Mixed
+
+---
+
+## 🤖 Machine Learning Models
+
+The system uses four Machine Learning models for question analysis.
+
+| Model               | Purpose                          |
+| ------------------- | -------------------------------- |
+| SVM                 | Question Type Classification     |
+| Logistic Regression | Difficulty Classification        |
+| KNN                 | Similarity / Duplicate Detection |
+| Random Forest       | Question Quality Classification  |
+
+Character-level TF-IDF features are used to convert question text into numerical representations for Machine Learning classification.
+
+---
+
+## 🔄 System Workflow
+
+```text
+Upload Document
+       ↓
+Extract Text
+       ↓
+Clean & Normalize Text
+       ↓
+Detect Language
+       ↓
+AI Question Generation
+       ↓
+Question Classification
+       ↓
+SVM
+       ↓
+Logistic Regression
+       ↓
+KNN Similarity Detection
+       ↓
+Random Forest Quality Classification
+       ↓
+Display Results
+       ↓
+Export Questions
+```
+
+---
+
+## 🛠️ Technologies Used
+
+### Programming Language
+
+* Python
+
+### AI / NLP
+
+* OpenRouter API
+* Large Language Models (LLMs)
+* Natural Language Processing (NLP)
+* Text preprocessing
+
+### Machine Learning
+
+* Scikit-learn
+* SVM
+* Logistic Regression
+* KNN
+* Random Forest
+* TF-IDF
+
+### User Interface
+
+* Gradio
+
+### Document Processing
+
+* PyPDF
+* python-docx
+* python-pptx
+
+### Output
+
+* ReportLab
+* DOCX
+* PDF
+
+---
+
+## 📂 Supported File Formats
+
+The system supports the following input formats:
+
+```text
+PDF
+DOCX
+TXT
+PPTX
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+```
+
+Go to the project directory:
+
+```bash
+cd YOUR-REPOSITORY
+```
+
+---
+
+## ☁️ Running with Google Colab
+
+The project is designed to run easily in **Google Colab**.
+
+### Step 1: Open Google Colab
+
+Open:
+
+https://colab.research.google.com/
+
+### Step 2: Upload the Notebook
+
+Upload:
+
+```text
+NLP.ipynb
+```
+
+### Step 3: Install Required Libraries
+
+Run:
+
+```python
+!pip install pandas numpy gradio openai pypdf python-docx python-pptx scikit-learn scipy reportlab
+```
+
+### Step 4: Configure the OpenRouter API Key
+
+The system requires an OpenRouter API key.
+
+In Google Colab:
+
+1. Open the left sidebar.
+2. Select **Secrets**.
+3. Add a new secret.
+4. Set the secret name to:
+
+```text
+OPENROUTER_API_KEY
+```
+
+5. Paste your OpenRouter API key as the value.
+6. Enable notebook access.
+
+### ⚠️ Important
+
+**Do not upload or commit your API key to GitHub.**
+
+Never write your actual API key directly inside the notebook or README file.
+
+---
+
+## ▶️ Run the Application
+
+After configuring the API key:
+
+1. Run the notebook cells from top to bottom.
+2. Wait for the required libraries to install.
+3. Wait for the Machine Learning models to load/train.
+4. Run the Gradio application cell.
+5. Open the Gradio link displayed by Google Colab.
+
+The application will open in a browser.
+
+---
+
+## 🖥️ How to Use
+
+### Step 1 — Upload a Document
+
+Upload one of the supported formats:
+
+```text
+PDF
+DOCX
+TXT
+PPTX
+```
+
+### Step 2 — Select Number of Questions
+
+Enter the number of questions you want to generate.
+
+Example:
+
+```text
+5
+```
+
+### Step 3 — Select Question Type
+
+Choose:
+
+```text
+Mixed
+MCQ
+True/False
+Short Answer
+```
+
+### Step 4 — Select Difficulty
+
+Choose:
+
+```text
+Mixed
+Easy
+Medium
+Hard
+```
+
+### Step 5 — Generate Questions
+
+Click:
+
+```text
+Generate Questions
+```
+
+The system will process the document and generate questions automatically.
+
+---
+
+## 📊 Question Analysis
+
+After generating questions, the system analyzes them using Machine Learning models.
+
+### SVM
+
+Used for question type classification.
+
+### Logistic Regression
+
+Used for difficulty classification.
+
+### KNN
+
+Used to identify similar or duplicate questions.
+
+### Random Forest
+
+Used to classify question quality.
+
+---
+
+## 🌏 Language Support
+
+The system supports:
+
+* 🇲🇲 Myanmar
+* 📜 Pali
+* 🇬🇧 English
+
+The system preserves Unicode characters when processing Myanmar and Pali text.
+
+---
+
+## 📤 Export
+
+Generated questions can be exported for further use.
+
+Supported output formats include:
+
+* DOCX
+* PDF
+
+---
+
+## 📁 Project Structure
+
+A typical project structure is:
+
+```text
+AI-Question-Generation/
+│
+├── NLP.ipynb
+├── README.md
+└── requirements.txt
+```
+
+If additional files are included in the repository, they can be added to the project structure accordingly.
+
+---
+
+## 🔐 Security
+
+This project uses the OpenRouter API.
+
+For security reasons:
+
+* Do not commit API keys.
+* Do not put API keys inside source code.
+* Do not upload `.env` files containing secrets.
+* Use Google Colab Secrets or environment variables.
+
+If an API key is accidentally exposed, revoke it immediately and generate a new one.
+
+---
+
+## 🚨 Troubleshooting
+
+### API Key Error
+
+If you receive an error related to the API key, check that:
+
+```text
+OPENROUTER_API_KEY
+```
+
+is correctly configured in Google Colab Secrets.
+
+### Module Not Found Error
+
+Install the required package:
+
+```bash
+pip install <package-name>
+```
+
+or run:
+
+```python
+!pip install pandas numpy gradio openai pypdf python-docx python-pptx scikit-learn scipy reportlab
+```
+
+### Model Unavailable
+
+If an OpenRouter model is temporarily unavailable, try running the application again or select another available model.
+
+---
+
+## 🎓 Academic Project
+
+This project was developed as an **NLP and Machine Learning academic project** demonstrating the application of Artificial Intelligence in automatic educational question generation.
+
+The project combines:
+
+```text
+Natural Language Processing
+        +
+Large Language Models
+        +
+Machine Learning
+        +
+Document Processing
+        +
+Gradio Web Interface
+```
+
+---
+
+## 👥 Contributors
+
+Add your team members here:
+
+```text
+1. Your Name
+2. Member Name
+3. Member Name
+4. Member Name
+5. Member Name
+6. Member Name
+```
+
+---
+
+## 📜 License
+
+This project is intended for educational and academic purposes.
+
+You may add an appropriate open-source license such as MIT License if required.
+
+---
+
+## ⭐ Acknowledgement
+
+This project uses open-source Python libraries, Scikit-learn, Gradio, document-processing libraries, and the OpenRouter API to implement the AI-based question generation and analysis system.
+
+---
+
+## 📌 Keywords
+
+```text
+Artificial Intelligence
+Natural Language Processing
+NLP
+Machine Learning
+Question Generation
+Automatic Question Generation
+Educational Technology
+SVM
+Logistic Regression
+KNN
+Random Forest
+TF-IDF
+Gradio
+OpenRouter
+Python
+Myanmar NLP
+Pali NLP
+```
